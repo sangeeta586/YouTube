@@ -12,3 +12,11 @@ app.use(express.json())
 app.use(express.urlencoded())//extended:true
 app.use(express.static)
 app.use(cookieParser())
+
+//routes
+import userRouter from "./routes/userRoute.js"
+
+app.use("/api/users",userRouter)
+
+
+export {app}
